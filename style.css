@@ -22,6 +22,8 @@ a, a:visited {
     --red: #D92915;
     --blue: #4068D3;
     --yellow: #DBB664;
+    --yellow-transparent25: #DBB66440;
+    --yellow-transparent50: #DBB66480;
     --aqua: #66B9C5; 
 }
 
@@ -52,7 +54,7 @@ body {
 }
 
 nav {
-    height: 120px;
+    height: 7.5rem;
     position: fixed;
     width: 100%;
     background: var(--dark-transparent);
@@ -112,7 +114,7 @@ nav .nav-item:hover::after {
 
 .btn:hover {
     cursor: pointer;
-    background: #DBB66440;
+    background: var(--yellow-transparent25);
     color: inherit;
 }
 
@@ -194,19 +196,79 @@ body > header > .btn:hover {
     background-position: center center;
 }
 
-header, section {
+header {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    align-self: center;
+}
+
+body > header, section {
     display: grid;
     align-items: center;
     justify-items: center;
     min-height: 100vh;
     width: 100%;
     padding: 2rem;
-    padding-top: calc(120px + 2rem);  /* 120px is offst from top of the site */
+    padding-top: calc(7.5rem + 2rem);  /* 120px is offst from top of the site */
 }
 
 section h1 {
     font-size: 4rem;
-    align-self: start;
+    align-self: center;
+    justify-self: center;
+}
+
+#to-win {
+    display: grid;
+    grid-template-columns: repeat(3, 18rem);
+    grid-gap: 2rem;
+}
+
+.to-win-col > img {
+    width: 100%;
+}
+
+.to-win-col > p {
+    font-size: 1.5rem;
+}
+
+.separator {
+    content: '';
+    background: var(--yellow-transparent25);
+    display: block;
+    width: 100%;
+    margin: auto;
+    height: 1px;
+}
+
+.to-win-col {
+    text-align: center;
+    display: grid;
+    align-items: center;
+    background: #4068D340;
+    border: 2px solid var(--dark);
+    height: 30rem;
+    padding: 2rem 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.to-win-col:hover {
+    background: #66B9C540;
+}
+
+#last-winners {
+    background: url('img/last-winners-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#time-to-next-season {
+    background: url('img/time-to-next-season-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 @media only screen and (max-width: 1796px) {
