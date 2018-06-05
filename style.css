@@ -18,7 +18,9 @@ a, a:visited {
 
 :root {
     --dark: #24292C;
-    --dark-transparent: #24292CE0;
+    --dark-transparent875: #24292CE0;
+    --dark-transparent50: #24292C80;
+    --dark-transparent25: #24292C40;
     --red: #D92915;
     --blue: #4068D3;
     --yellow: #DBB664;
@@ -51,13 +53,15 @@ body {
     display: grid;
     font-family: 'Lato', sans-serif;
     color: rgb(221, 224, 233);
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: proximity;
 }
 
 nav {
     height: 7.5rem;
     position: fixed;
     width: 100%;
-    background: var(--dark-transparent);
+    background: var(--dark-transparent875);
     padding: 1rem 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -118,6 +122,10 @@ nav .nav-item:hover::after {
     color: inherit;
 }
 
+.bg-dark {
+    background: var(--dark-transparent25) !important;
+}
+
 .red {
     color: var(--red);
 }
@@ -125,7 +133,6 @@ nav .nav-item:hover::after {
 .yellow {
     color: var(--yellow);
 }
-
 
 .white {
     color: white;
@@ -264,12 +271,83 @@ section h1 {
     background-position: center center;
 }
 
+#last-season-winners {
+    display: grid;
+    grid-template-columns: repeat(3, 12rem);
+    justify-items: center;
+    align-items: center;
+    grid-gap: 8rem;
+    --gold: var(--yellow);
+    --silver: rgb(114, 127, 134);
+    --bronze: #e07d3a;
+    --silver-gradient: linear-gradient(to bottom, rgba(114, 127, 134, 0.75) 1%,rgba(114,127,134,0.75) 66%,rgba(114,127,134,0) 100%);
+    --gold-gradient: linear-gradient(to bottom, #DBB664C0 1%,#DBB664C0 66%,#DBB66400 100%);
+    --bronze-gradient: linear-gradient(to bottom, #e07d3ac0 1%,#e07d3ac0 66%,#e07d3a00 100%);
+}
+
+.winner {
+    height: 40rem;
+    border-radius: 1000px 1000px 0 0;
+}
+
+.winner > img {
+    width: 12rem;
+    border-radius: 50%;
+    border-width: 4px;
+    border-style: solid;
+}
+
+.winner-info {
+    padding: 0 1rem;
+    font-size: 1.618rem;
+}
+
+.winner-info > p {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.winner-name {
+    
+}
+
+.winner-points {
+    /* color: var(--red); */
+}
+
+#winners-second {
+    background: var(--silver-gradient);
+}
+
+#winners-second > img {
+    border-color: var(--silver);
+}
+
+#winners-first {
+    /* border-color: var(--gold); */
+    background: var(--gold-gradient);
+}
+
+#winners-first > img {
+    border-color: var(--gold);
+}
+
+#winners-third {
+    /* border-color: var(--bronze); */
+    background: var(--bronze-gradient);
+}
+
+#winners-third > img {
+    border-color: var(--bronze);
+}
+
 #time-to-next-season {
     background: url('img/time-to-next-season-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
+
 
 @media only screen and (max-width: 1796px) {
     html {

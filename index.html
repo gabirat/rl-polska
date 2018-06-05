@@ -8,7 +8,17 @@
     <title>Rocket League - Polska</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#d92915">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="img/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -21,9 +31,18 @@
             </h1>
         </a>
         <ul>
-            <li class="nav-item"><a href="#"><i class="fas fa-trophy"></i> Turnieje</a></li>
-            <li class="nav-item"><a href="#"><i class="fas fa-address-card"></i>Kontakt</a></li>
-            <li class="nav-item"><a href="#"><i class="fas fa-cogs"></i>API</a></li>
+            <li class="nav-item">
+                <a href="#">
+                    <i class="fas fa-trophy"></i> Turnieje</a>
+            </li>
+            <li class="nav-item">
+                <a href="#">
+                    <i class="fas fa-address-card"></i>Kontakt</a>
+            </li>
+            <li class="nav-item">
+                <a href="#">
+                    <i class="fas fa-cogs"></i>API</a>
+            </li>
             <li class="btn">Zaloguj się</li>
         </ul>
     </nav>
@@ -34,47 +53,89 @@
         <div class="btn">Zacznij grać</div>
     </header>
     <section id="about">
-        <header><h1 class="uppercase">Co mogę <span class="yellow">wygrać</span> ?</h1></header>
+        <header>
+            <h1 class="uppercase">Co mogę
+                <span class="yellow">wygrać</span> ?</h1>
+        </header>
         <div id="to-win">
             <div class="to-win-col">
-                <img src="img/key.png" alt="key-to-win"/>
+                <img src="img/key.png" alt="key-to-win" />
                 <span class="separator"></span>
                 <p>Klucze do wymiany lub otwierania ulubionych skrzynek!</p>
             </div>
             <div class="to-win-col">
-                <img src="img/points.png" alt="key-to-win"/>
+                <img src="img/points.png" alt="key-to-win" />
                 <span class="separator"></span>
                 <p>Dodatkowe punkty do szybszego startu w następnym sezonie!</p>
             </div>
             <div class="to-win-col">
-                <img src="img/premium-month.png" alt="key-to-win"/>
+                <img src="img/premium-month.png" alt="key-to-win" />
                 <span class="separator"></span>
                 <p>Miesiąc konta premium, które pozwoli Ci na szybszy rozwój!</p>
             </div>
         </div>
     </section>
     <section id="last-winners">
-        <header><h1><span class="yellow">Zwyciescy</span> ostatniego sezonu!</h1></header>
+        <header>
+            <h1>
+                <span class="yellow">Zwyciescy</span> ostatniego sezonu!</h1>
+        </header>
         <div id="last-season-winners">
             <div id="winners-second" class="winner">
-                <img src="img/winner-second.jpg" alt="Second Place"/>
-                <p class="winner-name"></p>
-                <p class="winner-points"></p>
+                <img src="img/last-winners-second.jpg" alt="Second Place" />
+                <div class="winner-info">
+                    <p class="winner-name">Raczej</p>
+                    <span class="separator bg-dark"></span>
+                    <p class="winner-points">727
+                        <span class="red">pkt</span>
+                    </p>
+                    <span class="separator bg-dark"></span>
+                    <p class="winner-winratio">67
+                        <span class="red">%</span>
+                    </p>
+                    <span class="separator bg-dark"></span>
+                    <p class="winner-total-games">371</p>
+                </div>
             </div>
             <div id="winners-first" class="winner">
-                <img src="img/winner-first.jpg" alt="First Place"/>
-                <p class="winner-name"></p>
-                <p class="winner-points"></p>
+                <img src="img/last-winners-first.jpg" alt="First Place" />
+                <div class="winner-info">
+                    <p class="winner-name">Gabriel Ratajczak</p>
+                    <span class="separator bg-dark"></span>
+                    <p class="winner-points">957
+                        <span class="red">pkt</span>
+                    </p>
+                    <span class="separator bg-dark"></span>
+                    <p class="winner-winratio">83
+                        <span class="red">%</span>
+                    </p>
+                    <span class="separator bg-dark"></span>
+                    <p class="winner-total-games">492</p>
+                </div>
             </div>
             <div id="winners-third" class="winner">
-                <img src="img/winner-third.jpg" alt="Third Place"/>
-                <p class="winner-name"></p>
-                <p class="winner-points"></p>
+                <img src="img/last-winners-third.jpg" alt="Third Place" />
+                <div class="winner-info">
+                    <p class="winner-name">Kronovi</p>
+                    <span class="separator bg-dark"></span>
+                    <p class="winner-points">648
+                        <span class="red">pkt</span>
+                    </p>
+                    <span class="separator bg-dark"></span>
+                    <p class="winner-winratio">67
+                        <span class="red">%</span>
+                    </p>
+                    <span class="separator bg-dark"></span>
+                    <p class="winner-total-games">287</p>
+                </div>
             </div>
         </div>
     </section>
     <section id="time-to-next-season">
-        <header><h1>Następny sezon <span class="yellow">nadchodzi </span>za</h1></header>
+        <header>
+            <h1>Następny sezon
+                <span class="yellow">nadchodzi </span>za</h1>
+        </header>
 
     </section>
 </body>
