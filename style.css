@@ -220,6 +220,10 @@ body > header, section {
     padding-top: calc(7.5rem + 2rem);  /* 120px is offst from top of the site */
 }
 
+section > header {
+    padding: 1rem;
+}
+
 section h1 {
     font-size: 4rem;
     align-self: center;
@@ -346,6 +350,22 @@ section h1 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    --timer-gradient: linear-gradient(to top, var(--dark-transparent50) 1%,var(--dark-transparent50) 66%,#24292C00 100%);
+    padding-left: 30%;
+}
+
+#timer {
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    background: var(--timer-gradient);
+    border-radius: 0 0 40px 40px;
+    align-items: center;
+    justify-items: center;
+    font-size: 8rem;
+    padding: 2rem;
+    border-width: 2px;
+    border-style: none none solid;
+    border-color: var(--dark-transparent875);
 }
 
 
@@ -369,5 +389,15 @@ section h1 {
 
     #logo {
         width: 60%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 8px;
+    }
+
+    #time-to-next-season {
+        padding-left: 2rem;
     }
 }
